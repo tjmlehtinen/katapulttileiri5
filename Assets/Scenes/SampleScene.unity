@@ -119,6 +119,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &58244612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1791165765685050, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
+  m_PrefabInstance: {fileID: 838747406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &58244613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58244612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cb9edacee740344a0fc7b142cd7598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootPoint: {fileID: 838747407}
+  ammoBody: {fileID: 1670493048}
+  launchDirection: {x: 0, y: 1, z: 1}
+  launchForce: 10
 --- !u!1 &238271361
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +598,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4059261464750596, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1670493044}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1791165765685050, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 58244613}
   m_SourcePrefab: {fileID: 100100000, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
 --- !u!4 &838747407 stripped
 Transform:
@@ -716,7 +740,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
