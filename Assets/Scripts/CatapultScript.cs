@@ -1,17 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CatapultScript : MonoBehaviour
 {
+    public Slider angleSlider;
     public Transform turret;
     public Transform shootPoint;
     public Rigidbody ammoBody;
     public Vector3 launchDirection = new Vector3(0, 1, 1);
     public float launchForce = 10.0f;
     public float rotationSpeed = 100.0f;
+    private float launchAngle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("skripti toimii");
+        
     }
 
     // Update is called once per frame
@@ -32,6 +35,8 @@ public class CatapultScript : MonoBehaviour
     {
         ammoBody.transform.parent = null;
         ammoBody.isKinematic = false;
+        launchAngle = (angleSlider.value * Mathf.PI) / 180;
+        launchDirection = Mathf.Cos(launchAngle) * turret.forward + Mathf.Sin(launchAngle) * Vector3.up;
         ammoBody.AddForce(launchDirection.normalized * launchForce, ForceMode.Impulse);
     }
 
