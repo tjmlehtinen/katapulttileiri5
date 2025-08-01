@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cb9edacee740344a0fc7b142cd7598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armAnimator: {fileID: 1728342484}
   angleSlider: {fileID: 1858098062}
   turret: {fileID: 1084760359}
   shootPoint: {fileID: 838747407}
@@ -1388,6 +1389,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1791165765685050, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 58244613}
+    - targetCorrespondingSourceObject: {fileID: 1054238891274224, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1728342484}
   m_SourcePrefab: {fileID: 100100000, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
 --- !u!4 &838747407 stripped
 Transform:
@@ -2228,6 +2232,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134c663f7181c0944bbb497d409ce3de, type: 3}
+--- !u!1 &1728342480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1054238891274224, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
+  m_PrefabInstance: {fileID: 838747406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1728342484
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728342480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 19279d8d9d966be4ebbd1bd67f788a40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1834989819
 GameObject:
   m_ObjectHideFlags: 0

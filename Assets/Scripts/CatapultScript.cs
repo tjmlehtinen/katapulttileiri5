@@ -3,7 +3,9 @@ using UnityEngine.UI;
 
 public class CatapultScript : MonoBehaviour
 {
+    public Animator armAnimator;
     public Slider angleSlider;
+    public Slider forceSlider;
     public Transform turret;
     public Transform shootPoint;
     public Rigidbody ammoBody;
@@ -37,7 +39,9 @@ public class CatapultScript : MonoBehaviour
         ammoBody.isKinematic = false;
         launchAngle = (angleSlider.value * Mathf.PI) / 180;
         launchDirection = Mathf.Cos(launchAngle) * turret.forward + Mathf.Sin(launchAngle) * Vector3.up;
+        launchForce = forceSlider.value;
         ammoBody.AddForce(launchDirection.normalized * launchForce, ForceMode.Impulse);
+        armAnimator.SetTrigger("Launch");
     }
 
     void ResetCatapult()
